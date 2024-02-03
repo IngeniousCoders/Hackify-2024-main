@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CBR - Account</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <section class="login-section">
+            <form id="login-form" action="login" method="post" class="login-form" novalidate>
+                <h1 class="signup-header">Log in</h1>
+                <label>Email</label>
+                <input name="email" type="email" placeholder="Enter your email address" id="login-email">
+                <label>Password</label>
+                <input name="password" type="password" placeholder="Enter your password" id="login-password">
+            </form>
+            <form id="signup-form" action="../signup" method="post" class="signup-form" novalidate>
+                <h1 class="signup-header">Create your account</h1>
+                <label>Username</label>
+                <input name="username" type="text" placeholder="Enter a username" minlength="3" maxlength="30" required
+                    id="username">
+                <label>Email</label>
+                <input name="email" type="email" placeholder="Enter your email address" required>
+                <label>Password</label>
+                <input id="password" type="password" placeholder="Enter a password" required>
+                <input id="password-confirm" name="password" type="password" placeholder="Confirm your password"
+                    required>
+                <div class="termsandcon">
+                    <input type="checkbox" id="tacbox">
+                    <span>
+                        By signing up, you agree to the <a href="../terms-conditions">terms & conditions</a>
+                    </span>
+                </div>
+            </form>
+            <div class="submitbutton-section">
+                <input onclick="signupAction()" type="submit" value="Sign up">
+                <input onclick="loginAction(event)" type="submit" value="Log in">
+            </div>
+        </section>
+        <section class="information-section">
+            <h1 class="information-header">Welcome to</h1>
+            <h1 class="information-header-main">CBR</h1>
+            <h1 class="information-tagline">Built for citizens, by citizens.</h1>
+        </section>
+        <div class="information-section-background"></div>
+    </div>
+    <script src="/static/account.js"></script>
+</body>
+
+</html>

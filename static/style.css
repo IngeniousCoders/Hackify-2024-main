@@ -1,0 +1,198 @@
+@font-face {
+    font-family: Lexend;
+    src: url("/static/Lexend.ttf");
+}
+
+* {
+    font-family: Lexend;
+}
+
+input,
+textarea:focus {
+    outline: none;
+}
+
+body {
+    background-color: #D1ECFF;
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+.login-section {
+    display: flex;
+    order: 2;
+    color: #262626;
+}
+
+.login-section::placeholder {
+    color: #595959;
+}
+
+
+.login-container section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.information-section {
+    z-index: 10;
+    text-align: center;
+    justify-content: center;
+    color: #171717;
+}
+
+.information-section * {
+    margin: 0;
+}
+
+.information-section .information-header {
+    font-size: 4vw;
+    font-weight: normal;
+}
+
+.information-section .information-header-main {
+    font-size: 10vw;
+
+}
+
+.information-section .information-tagline {
+    font-size: 2.5vw;
+}
+
+.information-section-background {
+    background-color: #6095E2;
+    position: fixed;
+    height: 2000px;
+    width: 50%;
+    transform: translateY(-100px) rotate(-6deg);
+}
+
+.login-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+.submitbutton-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+    margin-bottom: auto;
+}
+
+.login-section input {
+    color: #262626;
+    box-sizing: border-box;
+    border: none;
+}
+
+.login-section input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background: transparent;
+    border-bottom: 0.25vw solid #8DE0FD;
+    font-size: 1.5vw;
+
+}
+
+.login-section input[type="submit"] {
+    background-color: #8DCAFD;
+    width: min-content;
+    font-size: 1.5vw;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.login-section input[type="checkbox"]::before {
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 1rem;
+    text-align: center;
+    transform: scale(0);
+    font-family: Lexend;
+    font-weight: 1000;
+    background-color: #262626;
+    clip-path: polygon(42% 65%, 14% 44%, 4% 56%, 43% 87%, 96% 18%, 85% 9%);
+}
+
+.login-section input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 4px;
+    background-color: #8DCAFD;
+    margin-right: 10px;
+}
+
+.login-section input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.termsandcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.login-section label {
+    font-size: 2vw;
+    margin-top: 20px;
+}
+
+.signup-header {
+    font-size: 3vw;
+    margin: 0;
+}
+
+a {
+    color: #2F5597;
+}
+
+a:visited {
+    color: #2F5597;
+}
+
+.terms-conditions {
+    margin: 10px;
+}
+
+.login-section input[type="checkbox"]:required:focus:valid {
+    background: none;
+    background-color: #8DCAFD;
+}
+
+.login-section input[type="checkbox"]:focus:invalid {
+    background: none;
+    background-color: #8DCAFD;
+}
+
+.login-section input:required:focus:valid {
+    background: url("../static/images/star-sharp.svg") no-repeat 95% 50% lightgreen;
+    background-size: 25px;
+}
+
+.login-section input:focus:invalid {
+    background: url("../static/images/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+    background-size: 25px;
+}
